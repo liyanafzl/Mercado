@@ -15,7 +15,10 @@ namespace Mercado.Views
 		public MyMasterPage ()
 		{
 			InitializeComponent ();
-            
+            List<string> l = new List<string>();
+            l.Add("");
+            NavList.ItemsSource = l;
+
 		}
 	}
 }

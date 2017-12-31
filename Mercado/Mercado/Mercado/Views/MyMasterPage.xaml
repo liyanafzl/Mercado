@@ -2,44 +2,31 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Mercado.Views"
-                  xmlns:locals="clr-namespace:Mercado.Views"
              x:Class="Mercado.Views.MyMasterPage"
                   Title="Mercado">
     <MasterDetailPage.Master>
         <ContentPage Title="Master">
             <StackLayout Orientation="Vertical">
-                <Button 
-                    Text="Profile" >
-                </Button>
-                <!--<ListView x:Name="listView">
-                    <ListView.ItemsSource>
-                        <x:Array Type="{x:Type local:MasterPageItem}">
-                            <local:MasterPageItem Title="Contacts" IconSource="contacts.png" TargetType="{x:Type local:ContactsPage}" />
-                            <local:MasterPageItem Title="TodoList" IconSource="todo.png" TargetType="{x:Type local:TodoListPage}" />
-                            <local:MasterPageItem Title="Reminders" IconSource="reminders.png" TargetType="{x:Type local:ReminderPage}" />
-                        </x:Array>
-                    </ListView.ItemsSource>
+                
+                <ListView x:Name="NavList" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Grid Padding="5,10">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="30"/>
-                                        <ColumnDefinition Width="*" />
-                                    </Grid.ColumnDefinitions>
-                                    <Image Source="{Binding IconSource}" />
-                                    <Label Grid.Column="1" Text="{Binding Title}" />
-                                </Grid>
+                                <StackLayout Orientation="Vertical" Padding="30">
+                                    <Grid>
+                                        <Label Text="SHOP BY DISCOUNT"></Label>
+                                        <Label Text="Deals for the day" Margin="0,20,0,0"/>
+                                    </Grid>
+                                </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                </ListView>-->
+                </ListView>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
-        <local:LoginPage></local:LoginPage>
-        <locals:HomePage></locals:HomePage>
+        <local:HomePage></local:HomePage>
     </MasterDetailPage.Detail>
 
 </MasterDetailPage>
