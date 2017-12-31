@@ -16,5 +16,33 @@ namespace Mercado.Views
 		{
 			InitializeComponent ();
 		}
-	}
+        
+       //public async void OnShopTapped(object s, EventArgs e)
+       // {
+            
+       //     await Navigation.PushAsync(new SignUpPage());  
+       // }
+       public async void CreateClicked(object s, EventArgs e)
+        {
+             await Navigation.PushAsync(new SignUpPage());
+        }
+        public async void LoginOnClicked(object s, EventArgs e)
+        {
+            string str_user = user.Text;
+            string str_pass = password.Text;
+            if(str_user.StartsWith("MERC"))
+            {
+
+            }
+            else
+            {
+                await Navigation.PushAsync(new HomePage());
+            }
+
+
+        }
+
+
+
+    }
 }

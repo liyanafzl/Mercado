@@ -2,19 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Mercado.Views;
 using Xamarin.Forms;
 
 namespace Mercado
 {
 	public partial class App : Application
 	{
-		public App ()
-		{
-			InitializeComponent();
-            
-			MainPage = new Mercado.Views.LoginPage();
-		}
+        public App()
+        {
+            InitializeComponent();
+
+            MainPage = new NavigationPage(new LoginPage())
+            {
+                BarBackgroundColor = Color.FromHex("cd344b"),
+                BarTextColor = Color.Black
+                
+            };
+        }
 
 		protected override void OnStart ()
 		{

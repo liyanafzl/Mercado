@@ -2,22 +2,30 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mercado.Views.LoginPage"
-             BackgroundColor="White">
+             BackgroundColor="White"
+            >
     <ContentPage.Content>
       
         <StackLayout Padding="30">
-            <Switch x:Name="UserSwitch"/>
+            
             <Image Source="logo"/>
             <StackLayout Orientation="Horizontal">
                 <Image Source="username" Margin="0,50,0,0"/>
-                <Entry Placeholder="Username/Unique ID" WidthRequest="260" Margin="0,50,0,0"/>
+                <Entry x:Name="user" Placeholder="Username/Unique ID" WidthRequest="260" Margin="0,50,0,0"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Image Source="pass"/>
-                <Entry Placeholder="Password" WidthRequest="260"/>
+                <Entry x:Name="password" Placeholder="Password" WidthRequest="260"/>
             </StackLayout>
-            <Button Text="Login" TextColor="White" BackgroundColor="#cd344b" HorizontalOptions="Center"/>
-            <Button Text="Create a new account" TextColor="White" BackgroundColor="#cd344b" HorizontalOptions="Center" Margin="0,150,0,0"/>
+            <Button Text="Login" TextColor="White" BackgroundColor="#cd344b" HorizontalOptions="Center" Clicked="LoginOnClicked"/>
+            <!--<Label Text="Login as shop owner" HorizontalOptions="Center" BackgroundColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                Tapped="OnShopTapped"
+                 />
+                </Label.GestureRecognizers>
+            </Label>-->
+                <Button Text="Create a new account" TextColor="White" BackgroundColor="#cd344b" HorizontalOptions="Center" Margin="0,150,0,0" Clicked="CreateClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
