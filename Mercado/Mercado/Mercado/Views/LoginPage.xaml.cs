@@ -28,15 +28,17 @@ namespace Mercado.Views
         }
         public async void LoginOnClicked(object s, EventArgs e)
         {
-            string str_user = user.Text;
-            string str_pass = password.Text;
+            string str_user, str_pass;
+             str_user = user.Text;
+             str_pass = password.Text;
             if(str_user.StartsWith("MERC"))
             {
-
+                await Navigation.PushAsync(new MyMasterPage());
+                 
             }
             else
             {
-                await Navigation.PushAsync(new HomePage());
+                await Navigation.PushAsync(new MyMasterPage());
             }
 
 
