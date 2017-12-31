@@ -1,17 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Mercado.Views.LoginPage">
+             x:Class="Mercado.Views.LoginPage"
+             BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout Padding="30" HorizontalOptions="Center" VerticalOptions="Center">
+      
+        <StackLayout Padding="30">
+            <Switch x:Name="UserSwitch"/>
+            <Image Source="logo"/>
             <StackLayout Orientation="Horizontal">
-                <Label Text="User Name" FontSize="Medium" WidthRequest="200"/>
-                <Entry Placeholder="Enter your user name" WidthRequest="200"/>
+                <Image Source="username" Margin="0,50,0,0"/>
+                <Entry Placeholder="Username/Unique ID" WidthRequest="260" Margin="0,50,0,0"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Password" FontSize="Medium" WidthRequest="200"/>
-                <Entry Placeholder="Enter your password" WidthRequest="200"/>
+                <Image Source="pass"/>
+                <Entry Placeholder="Password" WidthRequest="260"/>
             </StackLayout>
+            <Button Text="Login" TextColor="White" BackgroundColor="#cd344b" HorizontalOptions="Center"/>
+            <Button Text="Create a new account" TextColor="White" BackgroundColor="#cd344b" HorizontalOptions="Center" Margin="0,150,0,0"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
