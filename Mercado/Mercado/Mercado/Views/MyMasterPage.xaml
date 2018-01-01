@@ -7,7 +7,6 @@
     <MasterDetailPage.Master>
         <ContentPage Title="Master">
             <StackLayout Orientation="Vertical">
-                
                 <ListView x:Name="NavList" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -15,7 +14,11 @@
                                 <StackLayout Orientation="Vertical" Padding="30">
                                     <Grid>
                                         <Label Text="SHOP BY DISCOUNT"></Label>
-                                        <Label Text="Deals for the day" Margin="0,20,0,0"/>
+                                        <Label Text="Deals for the day" Margin="0,50,0,0">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="OnShopTapped"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
                                     </Grid>
                                 </StackLayout>
                             </ViewCell>

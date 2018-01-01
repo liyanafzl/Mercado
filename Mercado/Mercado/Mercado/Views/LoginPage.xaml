@@ -15,7 +15,7 @@
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Image Source="pass"/>
-                <Entry x:Name="password" Placeholder="Password" WidthRequest="260"/>
+                <Entry x:Name="password" Placeholder="Password" WidthRequest="260" />
             </StackLayout>
             <Button Text="Login" TextColor="White" BackgroundColor="#cd344b" HorizontalOptions="Center" Clicked="LoginOnClicked"/>
             <!--<Label Text="Login as shop owner" HorizontalOptions="Center" BackgroundColor="White">

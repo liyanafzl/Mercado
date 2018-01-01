@@ -4,22 +4,32 @@
              xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
              x:Class="Mercado.Views.HomePage">
     <ContentPage.Content>
-
-        <!--<SearchBar Placeholder="Search by product,location,shop and much more" VerticalOptions="Start"/>-->
-            <cv:CarouselViewControl ItemsSource="{Binding images}">
+        <ScrollView>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="220"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                <SearchBar  Placeholder="Search by product,location,shop and much more" VerticalOptions="Start"/>
+                <Button Text="Take photo" Command="{Binding TakePhoto}"/>
+                </StackLayout>
+                <cv:CarouselViewControl ItemsSource="{Binding images}" Grid.Row="1" HorizontalOptions="Start" InterPageSpacing="5">
                 <cv:CarouselViewControl.ItemTemplate>
-                    <DataTemplate>
-                        <!--<Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>-->
-                            <Image Source="{Binding oneimage}"/>
-                            
-                        <!--</Grid>-->
-                    </DataTemplate>
+                        <DataTemplate>
+                            <Image Margin="0" Aspect="AspectFit" Source="{Binding oneimage}"/>
+
+                        </DataTemplate>
                 </cv:CarouselViewControl.ItemTemplate>
             </cv:CarouselViewControl>
-    
+                <StackLayout Grid.Row="2" BackgroundColor="#cd344b" Orientation="Horizontal">
+                    <Label Text="Deals of the day" FontSize="Medium" Margin="20,10,20,20" TextColor="White"/>
+                    <Button Text="View All" BackgroundColor="White" TextColor="Black" Margin="80,5,0,5" />
+                </StackLayout>
+                <StackLayout Grid.Row="3" BackgroundColor="Black"/>
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

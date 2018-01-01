@@ -1,5 +1,4 @@
-﻿using Mercado.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,13 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace Mercado.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomePage : ContentPage
+	public partial class ShopDetail : ContentPage
 	{
-		public HomePage ()
+		public ShopDetail ()
 		{
-			InitializeComponent();
-            BindingContext = new CarouselVM();
-        }
-       
+			InitializeComponent ();
+		}
 	}
 }
