@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mercado.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,17 +11,16 @@ using Xamarin.Forms.Xaml;
 namespace Mercado.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SignUpPage : ContentPage
+	public partial class ListPage : ContentPage
 	{
-		public SignUpPage ()
+		public ListPage ()
 		{
 			InitializeComponent ();
+            Shop model = new Shop();
+            model.shopName = "ABC";
+           // List<Shop> l = new List<Shop>();
             
+            //ShopList.ItemsSource() = l;
 		}
-        public async void SignUpClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new HomePage());
-        }
-
-    }
+	}
 }

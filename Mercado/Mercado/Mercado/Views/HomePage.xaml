@@ -1,10 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:control="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
              x:Class="Mercado.Views.HomePage">
     <ContentPage.Content>
-        <SearchBar Placeholder="Search by product,location,shop and much more" VerticalOptions="Start"/>
-       
+
+        <!--<SearchBar Placeholder="Search by product,location,shop and much more" VerticalOptions="Start"/>-->
+            <cv:CarouselViewControl ItemsSource="{Binding images}">
+                <cv:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <!--<Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>-->
+                            <Image Source="icon"/>
+                            
+                        <!--</Grid>-->
+                    </DataTemplate>
+                </cv:CarouselViewControl.ItemTemplate>
+            </cv:CarouselViewControl>
+    
     </ContentPage.Content>
 </ContentPage>

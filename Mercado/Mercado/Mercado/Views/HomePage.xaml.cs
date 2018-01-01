@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mercado.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,8 @@ namespace Mercado.Views
 	{
 		public HomePage ()
 		{
-			InitializeComponent ();
-		}
+			InitializeComponent();
+            BindingContext = new CarouselVM();
+        }
 	}
 }
