@@ -9,16 +9,21 @@ namespace Mercado.ViewModels
 {
     class CarouselVM : INotifyPropertyChanged
     {
-        public ObservableCollection<string> images { get; set; }
-        public string im { get; set; }
-            
+        public ObservableCollection<Coupon> images { get; set; }
+        
         public CarouselVM()
         {
-            images = new ObservableCollection<string>
-            {   "logo.jpg",
-               "icon.png"
-               };
- 
+            images = new ObservableCollection<Coupon>
+            {   new Coupon
+            {
+                oneimage = "logo",
+            },
+            new Coupon
+            {
+               oneimage = "icon"
+            }
+            };
+            
 
         }
         public event PropertyChangedEventHandler PropertyChanged;

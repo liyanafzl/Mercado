@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Mercado.Models
 {
-    public class Coupon
+    public class Coupon 
     {
-        public string oneimage;
+        public string oneimage { get; set; }
     }
 }

@@ -14,7 +14,7 @@
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>-->
-                            <Image Source="icon"/>
+                            <Image Source="{Binding oneimage}"/>
                             
                         <!--</Grid>-->
                     </DataTemplate>
