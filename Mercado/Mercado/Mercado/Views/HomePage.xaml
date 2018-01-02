@@ -14,8 +14,8 @@
                     
                 </Grid.RowDefinitions>
 
-                <SearchBar Grid.Row="0" Text="{Binding text}" SearchCommand="{Binding SCommand}" Placeholder="Search by product,location,shop and much more" VerticalOptions="Start"/>
-                <cv:CarouselViewControl ItemsSource="{Binding images}" Grid.Row="1" HorizontalOptions="Start" InterPageSpacing="5">
+                <SearchBar Grid.Row="0" x:Name="SearchTab" SearchButtonPressed="SCommand"  Placeholder="Search by product,location,shop and much more" VerticalOptions="Start"/>
+                <cv:CarouselViewControl x:Name="cview" Grid.Row="1" HorizontalOptions="Start" InterPageSpacing="5">
                 <cv:CarouselViewControl.ItemTemplate>
                         <DataTemplate>
                             <Image Margin="0" Aspect="AspectFit" Source="{Binding oneimage}"/>
@@ -25,12 +25,12 @@
             </cv:CarouselViewControl>
                 <StackLayout Grid.Row="2" BackgroundColor="#cd344b" Orientation="Horizontal">
                     <Label Text="Deals of the day" FontSize="Medium" Margin="20,10,20,20" TextColor="White"/>
-                    <Button Text="View All" BackgroundColor="White" TextColor="Black" Margin="80,5,0,5" />
+                    <Button Clicked="ViewButton" Text="View All" BackgroundColor="White" TextColor="Black" Margin="80,5,0,5" />
                 </StackLayout>
-                <cv:CarouselViewControl ItemsSource="{Binding images}" Grid.Row="3" HorizontalOptions="Start" InterPageSpacing="5">
+                <cv:CarouselViewControl x:Name="cviews" Grid.Row="3" HorizontalOptions="Start" InterPageSpacing="5">
                     <cv:CarouselViewControl.ItemTemplate>
                         <DataTemplate>
-                            <Image Margin="0" Aspect="AspectFit" Source="{Binding oneimage}"/>
+                            <Image Margin="0" Aspect="AspectFit" Source="{Binding phone}"/>
                         </DataTemplate>
                     </cv:CarouselViewControl.ItemTemplate>
                 </cv:CarouselViewControl>

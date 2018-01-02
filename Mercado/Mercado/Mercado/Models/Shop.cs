@@ -41,5 +41,12 @@ namespace Mercado.Models
             set { _Longitude = value; }
         }
 
+        [JsonProperty(PropertyName = "Rating")]
+        public int Rating
+        {
+            get { return _Rating; }
+            set { _Rating = value; }
+        }
+
     }
 }

@@ -19,6 +19,8 @@
                                                 <TapGestureRecognizer Tapped="OnShopTapped"/>
                                             </Label.GestureRecognizers>
                                         </Label>
+                                    </Grid>
+                                    <Grid>
                                         <Label Text="About the app" Margin="0,50,0,0">
                                             <Label.GestureRecognizers>
                                                 <TapGestureRecognizer Tapped="OnAboutTapped"/>
