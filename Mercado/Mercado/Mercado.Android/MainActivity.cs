@@ -9,8 +9,8 @@ using Android.OS;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using CarouselView.FormsPlugin.Android;
-using Plugin.Permissions;
-using Plugin.Permissions.Abstractions;
+
+
 namespace Mercado.Droid
 {
     [Activity(Label = "Mercado", Icon = "@drawable/icon", Theme = "@style/Theme.splash", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

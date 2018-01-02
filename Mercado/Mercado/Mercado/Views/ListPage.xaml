@@ -10,24 +10,12 @@
                         <Grid BackgroundColor="LightYellow" HeightRequest="190">
                             <StackLayout Orientation="Vertical" Padding="20" BackgroundColor="PaleGoldenrod">
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="Task" WidthRequest="60" TextColor="Black"></Label>
-                                    <Label Text=""/>
+                                    <Label Text="Shop Name" WidthRequest="60" TextColor="Black"></Label>
+                                    <Label Text="{Binding ShopName}"/>
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="Status" WidthRequest="60" TextColor="Black"></Label>
-                                    <Label Text=""/>
-                                </StackLayout>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="Due date" WidthRequest="60" TextColor="Black"></Label>
-                                    <Label Text=""/>
-                                </StackLayout>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="Priority" WidthRequest="60" TextColor="Black"></Label>
-                                    <Label Text=""/>
-                                </StackLayout>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="Notes" WidthRequest="60" TextColor="Black"></Label>
-                                    <Label Text=""/>
+                                    <Label Text="Rating" WidthRequest="60" TextColor="Black"></Label>
+                                    <Label Text="{Binding Rating}"/>
                                 </StackLayout>
                             </StackLayout>
                         </Grid>

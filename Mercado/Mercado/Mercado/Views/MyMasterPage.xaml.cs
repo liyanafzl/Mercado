@@ -25,5 +25,9 @@ namespace Mercado.Views
         {
             await Navigation.PushAsync(new ShopDetail());
         }
+        public async void OnAboutTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AboutPage());
+        }
     }     
 }

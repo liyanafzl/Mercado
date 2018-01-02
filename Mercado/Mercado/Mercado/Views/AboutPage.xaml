@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mercado.Views.AboutPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Label Text="About the App"
+               Margin="20" />
+            <Label Text="_______________________________________________"/>
+            <Label Text="This App is designed by Mercado LTD." Margin="20"/>
+            <Grid>
+                <Label Text="TPM ABDUL KAREEM" Margin="20"/>
+                <Label Text="Front-end Developer" Margin="20,0,0,0"/>
+            </Grid>
+            <Grid>
+                <Label Text="WAFA" Margin="20"/>
+                <Label Text="Back-end Developer" Margin="20,0,0,0"/>
+            </Grid>
+            <Grid>
+                <Label Text="Liyana" Margin="20"/>
+                <Label Text="Mobile Lead" Margin="20,0,0,0"/>
+            </Grid>
+            <Grid>
+                <Label Text="Zadnoor" Margin="20"/>
+                <Label Text="AI Lead" Margin="20,0,0,0"/>
+            </Grid>
+            <Grid>
+                <Label Text="Shahabas KT" Margin="20"/>
+                <Label Text="UI/UX Devloper" Margin="20,0,0,0"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

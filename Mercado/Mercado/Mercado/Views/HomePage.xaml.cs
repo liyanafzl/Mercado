@@ -1,6 +1,8 @@
-﻿using Mercado.ViewModels;
+﻿using Mercado.Models;
+using Mercado.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,10 +15,12 @@ namespace Mercado.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class HomePage : ContentPage
 	{
+        INavigation navigation;
 		public HomePage ()
 		{
 			InitializeComponent();
-            BindingContext = new CarouselVM();
+           
+            BindingContext = new CarouselVM(navigation);
         }
        
 	}

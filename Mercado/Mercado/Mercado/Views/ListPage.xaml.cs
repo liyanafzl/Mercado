@@ -1,6 +1,7 @@
 ﻿using Mercado.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,11 +14,10 @@ namespace Mercado.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ListPage : ContentPage
 	{
-		public ListPage ()
+		public ListPage (ObservableCollection<Shop> l)
 		{
 			InitializeComponent ();
-            Shop model = new Shop();
-            model.shopName = "ABC";
+            ShopList.ItemsSource = l;
            // List<Shop> l = new List<Shop>();
             
             //ShopList.ItemsSource() = l;

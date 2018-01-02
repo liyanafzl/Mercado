@@ -5,7 +5,7 @@
              BackgroundColor="White"
             >
     <ContentPage.Content>
-      
+        <ScrollView>
         <StackLayout Padding="30">
             
             <Image Source="logo"/>
@@ -27,5 +27,6 @@
             </Label>-->
                 <Button Text="Create a new account" TextColor="White" BackgroundColor="#cd344b" HorizontalOptions="Center" Margin="0,150,0,0" Clicked="CreateClicked"/>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
