@@ -12,7 +12,7 @@ namespace Mercado.Services
   public  class UserService
     {
                 
-              private const string BaseUrl = "https://mercadoapp.azurewebsites.net/";
+              private const string BaseUrl = "https://mercadoapp.azurewebsites.net";
                 private HttpClient httpclient;
                 public UserService()
                 {
